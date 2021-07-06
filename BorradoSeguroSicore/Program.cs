@@ -135,7 +135,7 @@ namespace BorradoSeguroSicore
         {
             try
             {
-                if (Directory.GetFiles(path).Length == 0 && path != WORKSPACE)
+                if ((Directory.GetFiles(path).Length + Directory.GetDirectories(path).Length) == 0 && path != WORKSPACE)
                 {
                     Directory.Delete(path, true);
                 }
